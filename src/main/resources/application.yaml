@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/item_data
+    username: item_data_admin
+    password: dojo
+server:
+  port: 8051
+logging:
+  level:
+    org.springframework.data.r2dbc: Debug
