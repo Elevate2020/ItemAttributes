@@ -26,12 +26,17 @@ public class ItemController {
 
     @GetMapping(value = "/items/{itemId}", produces = "application/json")
     public Mono<Item> getItemAttributes(@PathVariable int itemId){
-        return itemService.getItemAttributes(itemId);
+        return itemService.getItemAttributesWithId(itemId);
     }
 
     @PostMapping(value = "/items", consumes = "application/json", produces = "application/json")
     public Mono<Item> createItemAttributes(@RequestBody Item body){
         return itemService.addItemAttributes(body);
+    }
+
+    @DeleteMapping(value = "/items/{itemId}", produces = "application/json")
+    public Mono<Void> deleteItemAttributes(@PathVariable int itemId){
+        return itemService.deleteItemAttributesWithId(itemId);
     }
 
 }

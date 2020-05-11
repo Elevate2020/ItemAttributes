@@ -1,5 +1,6 @@
 package com.target.itemattributesreactive.service;
 
+import com.target.itemattributesreactive.exceptions.InvalidInputException;
 import com.target.itemattributesreactive.exceptions.NotFoundException;
 import com.target.itemattributesreactive.mapper.ItemMapper;
 import com.target.itemattributesreactive.model.Item;
@@ -29,7 +30,12 @@ public class ItemServiceImplementation implements ItemService {
 //    }
 
     @Override
-    public Mono<Item> getItemAttributes(int id) {
+    public Mono<Item> getItemAttributesWithId(int id) {
+
+        if (id < 0){
+            throw new InvalidInputException("Invalid ID provided: " + id);
+        }
+
         return itemRepository.findById(id)
                             .switchIfEmpty(Mono.error(new NotFoundException("no attributes found for item id " + id)))
                             .log()
@@ -54,5 +60,9 @@ public class ItemServiceImplementation implements ItemService {
         LOG.info(String.valueOf(newItem));
         return newItem;
 //        return itemRepository.save(mapper.apiToEntity(item));
+    }
+
+    public Mono<Void> deleteItemAttributesWithId(int id) {
+       return itemRepository.deleteById(id);
     }
 }

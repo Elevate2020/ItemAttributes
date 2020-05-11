@@ -1,11 +1,13 @@
 package com.target.itemattributesreactive.model;
 
 import lombok.*;
+//import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-//import javax.persistence.Id;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Table(value = "item_dev.item_attributes")//name = "item_attributes", schema = "item_dev")
 @Builder
@@ -17,14 +19,20 @@ import javax.persistence.GenerationType;
 public class ItemEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer id;
 
     private String name;
 
     private String description;
 
     private String abbreviation;
+
+    private LocalDate manufactured_date;
+
+    private LocalDate expiry_date;
+
+    private LocalDate purchase_date;
 
     private String manufacturer_id;
 
