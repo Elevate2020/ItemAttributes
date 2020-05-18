@@ -1,0 +1,14 @@
+server.port: 8002
+spring.datasource:
+  url: jdbc:postgresql://localhost:5432/item_data
+  username: item_data_admin
+  password: dojo
+
+spring:
+  jpa:
+    show-sql: true
+
+logging:
+  level:
+    root: INFO
+    com.target: DEBUG
