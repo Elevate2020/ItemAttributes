@@ -1,5 +1,7 @@
 package com.target.itemattributes.service;
 
+import com.target.itemattributes.exceptions.InvalidInputException;
+import com.target.itemattributes.exceptions.NotFoundException;
 import com.target.itemattributes.mapper.ItemMapper;
 import com.target.itemattributes.model.Item;
 import com.target.itemattributes.model.ItemEntity;
@@ -25,8 +27,11 @@ public class ItemService {
         this.mapper = mapper;
     }
 
-    public Item getItemAttributes(int itemId) {
-        ItemEntity entity = itemRepository.findById(itemId).get();
+    public Item getItemAttributesWithId(int itemId) {
+        if (itemId < 0) throw new InvalidInputException("Invalid itemId provided : " + itemId);
+
+        ItemEntity entity = itemRepository.findById(itemId)
+                                            .orElseThrow(() -> new NotFoundException("no attributes found for the item with itemId:" + itemId));
         Item itemApi = mapper.entityToApi(entity);
 
         return itemApi;
@@ -34,6 +39,9 @@ public class ItemService {
 
     public List<Item> getAllItemsWithAttributes() {
         List<ItemEntity> entityList = itemRepository.findAll();
+
+        if(entityList.size() == 0) throw new NotFoundException("not a single item found!");
+
         List<Item> apiList = mapper.entityListToApiList(entityList);
 
         return apiList;
@@ -41,7 +49,7 @@ public class ItemService {
 
     public Item createItemAttributes(Item body) {
         ItemEntity entity = mapper.apiToEntity(body);
-        LOG.info(String.valueOf(entity));
+
         ItemEntity newEntity = itemRepository.save(entity);
 
         return mapper.entityToApi(newEntity);

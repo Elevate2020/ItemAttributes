@@ -25,7 +25,7 @@ public class ItemController {
 
     @GetMapping(value = "/items/{itemId}", produces = "application/json")
     public Item getItemAttributes(@PathVariable int itemId){
-        return itemService.getItemAttributes(itemId);
+        return itemService.getItemAttributesWithId(itemId);
     }
 
     @PostMapping(value = "/items", consumes = "application/json", produces = "application/json")
