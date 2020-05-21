@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class Item {
 
-    private int id;
+    private Integer id;
 
     private String name;
 
@@ -22,29 +22,29 @@ public class Item {
 
     private String manufacturer_name;
 
-    private float user_rating;
+    private Float user_rating;
 
     private String color;
 
-    private float height;
+    private Float height;
 
-    private float width;
+    private Float width;
 
-    private float depth;
+    private Float depth;
 
-    private float weight;
+    private Float weight;
 
-    private int units_per_pack;
+    private Integer units_per_pack;
 
     private String brand;
 
-    private int vendor_case_pack;
+    private Integer vendor_case_pack;
 
-    private boolean is_fragile;
+    private Boolean is_fragile;
 
-    private boolean is_returnable;
+    private Boolean is_returnable;
 
-    private boolean is_item_hazardous;
+    private Boolean is_item_hazardous;
 
     private String status;
 
@@ -52,7 +52,7 @@ public class Item {
 
     private String updated_by;
 
-    public Item(int id, String name, String description, String abbreviation, LocalDateTime manufactured_date, LocalDateTime expiry_date, LocalDateTime purchase_date, String manufacturer_id, String manufacturer_name, float user_rating, String color, float height, float width, float depth, float weight, int units_per_pack, String brand, int vendor_case_pack, boolean is_fragile, boolean is_returnable, boolean is_item_hazardous, String status, String created_by, String updated_by) {
+    public Item(Integer id, String name, String description, String abbreviation, LocalDateTime manufactured_date, LocalDateTime expiry_date, LocalDateTime purchase_date, String manufacturer_id, String manufacturer_name, Float user_rating, String color, Float height, Float width, Float depth, Float weight, Integer units_per_pack, String brand, Integer vendor_case_pack, Boolean is_fragile, Boolean is_returnable, Boolean is_item_hazardous, String status, String created_by, String updated_by) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -82,11 +82,11 @@ public class Item {
     public Item() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -154,11 +154,11 @@ public class Item {
         this.manufacturer_name = manufacturer_name;
     }
 
-    public float getUser_rating() {
+    public Float getUser_rating() {
         return user_rating;
     }
 
-    public void setUser_rating(float user_rating) {
+    public void setUser_rating(Float user_rating) {
         this.user_rating = user_rating;
     }
 
@@ -170,43 +170,43 @@ public class Item {
         this.color = color;
     }
 
-    public float getHeight() {
+    public Float getHeight() {
         return height;
     }
 
-    public void setHeight(float height) {
+    public void setHeight(Float height) {
         this.height = height;
     }
 
-    public float getWidth() {
+    public Float getWidth() {
         return width;
     }
 
-    public void setWidth(float width) {
+    public void setWidth(Float width) {
         this.width = width;
     }
 
-    public float getDepth() {
+    public Float getDepth() {
         return depth;
     }
 
-    public void setDepth(float depth) {
+    public void setDepth(Float depth) {
         this.depth = depth;
     }
 
-    public float getWeight() {
+    public Float getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(Float weight) {
         this.weight = weight;
     }
 
-    public int getUnits_per_pack() {
+    public Integer getUnits_per_pack() {
         return units_per_pack;
     }
 
-    public void setUnits_per_pack(int units_per_pack) {
+    public void setUnits_per_pack(Integer units_per_pack) {
         this.units_per_pack = units_per_pack;
     }
 
@@ -218,35 +218,35 @@ public class Item {
         this.brand = brand;
     }
 
-    public int getVendor_case_pack() {
+    public Integer getVendor_case_pack() {
         return vendor_case_pack;
     }
 
-    public void setVendor_case_pack(int vendor_case_pack) {
+    public void setVendor_case_pack(Integer vendor_case_pack) {
         this.vendor_case_pack = vendor_case_pack;
     }
 
-    public boolean isIs_fragile() {
+    public Boolean isIs_fragile() {
         return is_fragile;
     }
 
-    public void setIs_fragile(boolean is_fragile) {
+    public void setIs_fragile(Boolean is_fragile) {
         this.is_fragile = is_fragile;
     }
 
-    public boolean isIs_returnable() {
+    public Boolean isIs_returnable() {
         return is_returnable;
     }
 
-    public void setIs_returnable(boolean is_returnable) {
+    public void setIs_returnable(Boolean is_returnable) {
         this.is_returnable = is_returnable;
     }
 
-    public boolean isIs_item_hazardous() {
+    public Boolean isIs_item_hazardous() {
         return is_item_hazardous;
     }
 
-    public void setIs_item_hazardous(boolean is_item_hazardous) {
+    public void setIs_item_hazardous(Boolean is_item_hazardous) {
         this.is_item_hazardous = is_item_hazardous;
     }
 

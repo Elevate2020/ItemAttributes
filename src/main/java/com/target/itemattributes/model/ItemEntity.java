@@ -9,7 +9,7 @@ public class ItemEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     private String name;
 
@@ -32,34 +32,34 @@ public class ItemEntity {
     @Column(name = "manufacturer_name")
     private String manufacturerName;
 
-    private float rating;
+    private Float rating;
 
     private String color;
 
-    private float height;
+    private Float height;
 
-    private float width;
+    private Float width;
 
-    private float depth;
+    private Float depth;
 
-    private float weight;
+    private Float weight;
 
     @Column(name = "units_per_pack")
-    private int unitsPerPack;
+    private Integer unitsPerPack;
 
     private String brand;
 
     @Column(name = "vendor_case_pack")
-    private int vendorCasePack;
+    private Integer vendorCasePack;
 
     @Column(name = "is_fragile")
-    private boolean isFragile;
+    private Boolean isFragile;
 
     @Column(name = "is_returnable")
-    private boolean isReturnable;
+    private Boolean isReturnable;
 
     @Column(name = "is_item_hazardous")
-    private boolean isItemHazardous;
+    private Boolean isItemHazardous;
 
     private String status;
 
@@ -72,7 +72,7 @@ public class ItemEntity {
     public ItemEntity() {
     }
 
-    public ItemEntity(int id, String name, String description, String abbreviation, LocalDateTime manufacturedDate, LocalDateTime expiryDate, LocalDateTime purchaseDate, String manufacturerId, String manufacturerName, float rating, String color, float height, float width, float depth, float weight, int unitsPerPack, String brand, int vendorCasePack, boolean isFragile, boolean isReturnable, boolean isItemHazardous, String status, String createdBy, String updatedBy) {
+    public ItemEntity(Integer id, String name, String description, String abbreviation, LocalDateTime manufacturedDate, LocalDateTime expiryDate, LocalDateTime purchaseDate, String manufacturerId, String manufacturerName, Float rating, String color, Float height, Float width, Float depth, Float weight, Integer unitsPerPack, String brand, Integer vendorCasePack, Boolean isFragile, Boolean isReturnable, Boolean isItemHazardous, String status, String createdBy, String updatedBy) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -99,11 +99,11 @@ public class ItemEntity {
         this.updatedBy = updatedBy;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -171,11 +171,11 @@ public class ItemEntity {
         this.manufacturerName = manufacturerName;
     }
 
-    public float getRating() {
+    public Float getRating() {
         return rating;
     }
 
-    public void setRating(float rating) {
+    public void setRating(Float rating) {
         this.rating = rating;
     }
 
@@ -187,43 +187,43 @@ public class ItemEntity {
         this.color = color;
     }
 
-    public float getHeight() {
+    public Float getHeight() {
         return height;
     }
 
-    public void setHeight(float height) {
+    public void setHeight(Float height) {
         this.height = height;
     }
 
-    public float getWidth() {
+    public Float getWidth() {
         return width;
     }
 
-    public void setWidth(float width) {
+    public void setWidth(Float width) {
         this.width = width;
     }
 
-    public float getDepth() {
+    public Float getDepth() {
         return depth;
     }
 
-    public void setDepth(float depth) {
+    public void setDepth(Float depth) {
         this.depth = depth;
     }
 
-    public float getWeight() {
+    public Float getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(Float weight) {
         this.weight = weight;
     }
 
-    public int getUnitsPerPack() {
+    public Integer getUnitsPerPack() {
         return unitsPerPack;
     }
 
-    public void setUnitsPerPack(int unitsPerPack) {
+    public void setUnitsPerPack(Integer unitsPerPack) {
         this.unitsPerPack = unitsPerPack;
     }
 
@@ -235,35 +235,35 @@ public class ItemEntity {
         this.brand = brand;
     }
 
-    public int getVendorCasePack() {
+    public Integer getVendorCasePack() {
         return vendorCasePack;
     }
 
-    public void setVendorCasePack(int vendorCasePack) {
+    public void setVendorCasePack(Integer vendorCasePack) {
         this.vendorCasePack = vendorCasePack;
     }
 
-    public boolean getIsFragile() {
+    public Boolean getIsFragile() {
         return isFragile;
     }
 
-    public void setIsFragile(boolean fragile) {
+    public void setIsFragile(Boolean fragile) {
         isFragile = fragile;
     }
 
-    public boolean getIsReturnable() {
+    public Boolean getIsReturnable() {
         return isReturnable;
     }
 
-    public void setIsReturnable(boolean returnable) {
+    public void setIsReturnable(Boolean returnable) {
         isReturnable = returnable;
     }
 
-    public boolean getIsItemHazardous() {
+    public Boolean getIsItemHazardous() {
         return isItemHazardous;
     }
 
-    public void setIsItemHazardous(boolean itemHazardous) {
+    public void setIsItemHazardous(Boolean itemHazardous) {
         isItemHazardous = itemHazardous;
     }
 
